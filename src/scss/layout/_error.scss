@@ -1,0 +1,27 @@
+@use "../global" as g;
+@use '../util' as u;
+
+.error{
+    padding-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 88vh;
+    h2{
+        color:#a4a3a3;
+        font-weight: 500;
+        font-family: u.$font2;
+    }
+    h3{
+        transition: 0.3s all ease-in;
+        a{
+            color: #636363;
+            font-family: u.$font2;
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

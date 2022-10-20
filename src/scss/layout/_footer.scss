@@ -1,0 +1,128 @@
+@use "../global" as g;
+@use "../util" as u;
+
+.footer{
+    background: #9d7cff linear-gradient(180deg, #9d7cff 0%, #7749ff 100%) repeat-x;
+    &__content{
+        color: g.$white;
+        width: min(100% - u.rem(60), u.rem(1100));
+        margin-inline: auto;
+        padding: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        .top__content{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            @include u.breakpoint-down(medium){
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 5rem;
+            }
+            .footer__boost, .footer__support, .footer__tikroyal{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                row-gap: 1.25rem;
+                font-family: u.$font1;
+                h4{
+                    font-size: u.rem(26);
+                    @include u.breakpoint-down(medium){
+                        font-size: u.rem(22);
+                    }
+                }
+            }
+            .footer__boost, .footer__support{
+                .links{
+                    display: flex;
+                    flex-direction: column;
+                    gap: u.rem(14);
+                    a{
+                        color: g.$light;
+                        text-transform: uppercase;
+                        word-spacing: u.rem(2);
+                        letter-spacing: 1.5;
+                        font-size: u.rem(19);
+                        font-weight: 300;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .footer__tikroyal{
+                .title{
+                    letter-spacing: 1.2;
+                }
+                .desc{
+                    font-size: u.rem(21);
+                    letter-spacing: 2;
+                    line-height: 1.25;
+                    word-spacing: u.rem(2);
+                    @include u.breakpoint-down(medium){
+                        font-size: u.rem(19);
+                    }
+                }
+                .rating{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    row-gap: 1.25rem;
+                    background:rgba(255, 255, 255, 0.08);
+                    border-radius: 0.5rem;
+                    padding:1rem;
+                    width: 85%;
+                    @include u.breakpoint-down(medium){
+                        width: 100%;
+                    }
+                    img{
+                        width: 85%;
+                    }
+                    span{
+                        font-size: u.rem(17);
+                        font-family:u.$font2;
+                        white-space: nowrap;
+                        @include u.breakpoint-down(medium){
+                            font-size: u.rem(15);
+                        }
+                    }
+
+                }
+            }
+        }
+        .bottom__content{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 2rem;
+            @include u.breakpoint-down(medium){
+                text-align: start;
+                align-items: flex-start;
+            }
+            .payment-options{
+                display: flex;
+                align-items: center;
+                background-color: g.$white;
+                justify-content: center;
+                width: 240px;
+                border-radius: u.rem(3);
+                margin-inline: auto;
+                @include u.breakpoint-down(medium){
+                    width: 200px;
+                    margin-inline: 0;
+                }
+                .card1, .card2, .card3{
+                    width: 100%;
+                }
+
+            }
+            .copyright{
+                font-size: u.rem(18);
+                @include u.breakpoint-down(medium){
+                    font-size: u.rem(15);
+                }
+            }
+        }
+    }
+}

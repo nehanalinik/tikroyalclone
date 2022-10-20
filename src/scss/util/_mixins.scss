@@ -1,0 +1,17 @@
+@mixin cta($color, $bgColor, $fs) {
+    background: none;
+    border: 0;
+    padding: 0.65rem 1.25rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    color: $color;
+    background: $bgColor;
+    font-size: $fs;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: rgb(0 0 0 / 10%) 0 2px 4px;
+    transition: 0.3s all ease-in;
+}

@@ -1,0 +1,566 @@
+@use "../global" as g;
+@use "../util" as u;
+
+.likes__section{
+    padding-top: 12vh;
+    background: #9d7cff linear-gradient(180deg, #9d7cff 0%, #7749ff 100%) repeat-x;
+    .likes__contents{
+        width: min(100% - u.rem(40), u.rem(1100));
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 2rem;
+        padding: 5rem 0;
+        @include u.breakpoint-down(medium){
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+        .likes__text{
+            color: g.$white;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 1.45rem;
+            @include u.breakpoint-down(medium){
+                align-items: center;
+            }
+            h1{
+                font-size: u.rem(40);
+                @include u.breakpoint-down(medium){
+                    text-align: center;
+                }
+            }
+            p{
+                font-size: u.rem(21);
+                width: 60%;
+                line-height: 1.45;
+                @include u.breakpoint-down(medium){
+                    width: 80%;
+                    text-align: center;
+                }
+            }
+        }
+        .likes__order{
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+            @include u.breakpoint-down(medium){
+                align-items: center;
+            }
+            .order{
+                background-color: g.$white;
+                border-radius: 0.85rem;
+                width: 450px;
+                .head{
+                    padding: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    column-gap: u.rem(8);
+                    color: g.$black;
+                    background: g.$light;
+                    border-radius: 0.85rem;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    .heart-icon{
+                        color: g.$secondary;
+                    }
+                    h3{
+                        font-size: u.rem(24);
+                    }
+                }
+                .slider-parent{
+                    padding: 1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    .bubble{
+                        font-size: u.rem(22);
+                        font-family: u.$font1;
+                        font-weight: 500;
+                        text-align: center;
+                        padding: 0.5rem 0 1.5rem;
+                    }
+                    .rangeInput{
+                        padding: 0.5rem 0;
+                    }
+                    input[type=range]::-webkit-slider-thumb{
+                        height: 36px;
+                        width: 36px;
+                        border-radius: u.rem(50);
+                        background: g.$primary;
+                        margin-top: u.rem(-10);
+                    }
+                    input[type=range]::-webkit-slider-runnable-track{
+                        width: 100%;
+                        height: u.rem(18);
+                        cursor: pointer;
+                        background: g.$light;
+                        border-radius: u.rem(50);
+                    }
+                    .price{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0.5rem 0 1rem;
+                        .currAmount{
+                            width: 100%;
+                            text-align: end;
+                            font-size: u.rem(22);
+                            font-family: u.$font1;
+                            font-weight: 500;
+                        }
+                        .off{
+                            width: 100%;
+                            text-align: end;
+                            span{
+                                font-family: u.$font1;
+                                font-size: u.rem(14);
+                                font-weight: 500;
+                                color:g.$yellow;
+                                background-color: g.$primary;
+                                padding: 0.45rem;
+                                border-radius: u.rem(6);
+                            }
+                            
+                        }
+                    }
+                    .cta{
+                        @include u.cta(g.$white, g.$secondary, u.rem(18));
+                        margin: 0.5rem 0;
+                        text-transform: uppercase;
+                        &:hover{
+                            background: #7749ff;
+                        }
+                    }
+                }
+            }
+            .about{
+                width: 80%;
+                margin-inline: auto;
+                text-align: center;
+                color: g.$white;
+                font-size: u.rem(18);
+                line-height: 1.45;
+                font-family: u.$font2;
+                @include u.breakpoint-down(medium){
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
+
+.likes__about{
+    .likes__about-content{
+        width: min(100% - u.rem(60), u.rem(1100));
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem 0;
+        @include u.breakpoint-down(medium){
+            flex-direction: column-reverse;
+            row-gap: 3rem;
+        }
+        .likes__content-text{
+            @include u.breakpoint-down(medium){
+                padding: 0 80px;
+            }
+            h2{
+                font-size: u.rem(40);
+                color: g.$black;
+                width: 60%;
+                font-weight: 600;
+                line-height: 1.35;
+                padding: 0.5rem 0;
+                @include u.breakpoint-down(medium){
+                    font-size: u.rem(34);
+                    width: 100%;
+                }
+            }
+            .likes__desc{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1.45rem;
+                p{
+                    font-size: u.rem(21);
+                    color: g.$black;
+                    font-weight: 400;
+                    width: 70%;
+                    line-height: 1.45;
+                    @include u.breakpoint-down(medium){
+                        font-size: u.rem(19);
+                        width: 100%;
+                    }
+                }
+                .imp-para{
+                    font-size: u.rem(22);
+                    font-family: u.$font2;
+                    width: 70%;
+                    line-height: 1.45;
+                    font-weight: 500;
+                    color: g.$black;
+                    @include u.breakpoint-down(medium){
+                        font-size: u.rem(20);
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .likes__content-image{
+            width: 120%;
+            height: 120%;
+            @include u.breakpoint-down(medium){
+                width: 60%;
+                height: 60%;
+            }
+        }
+    }
+}
+
+.buy__likes{
+    background: #00c2a4 linear-gradient(180deg, #00c2a4 0%, #008f79 100%) repeat-x;
+    .buy__likes-content{
+        width: min(100% - u.rem(40), u.rem(1100));
+        margin-inline: auto;
+        display: grid;
+        row-gap: 1rem;
+        padding: 4rem 0;
+        .buy__likes-text{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3{
+                font-size: u.rem(36);
+                color: g.$white;
+                text-align: center;
+                padding: 1rem 0;
+            }
+            button{
+                @include u.cta(g.$white, g.$primary, u.rem(16));
+                padding: 0.45rem 0.85rem;
+                text-transform: uppercase;
+                margin: 0.5rem 0;
+            }
+            .desc{
+                width: 45%;
+                color: g.$white;
+                padding: 1rem 0;
+                font-size: u.rem(18);
+                line-height: 1.35;
+            }
+        }
+        .buy__likes-card{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            column-gap: u.rem(12);
+            row-gap: u.rem(20);
+            place-items: center;
+            .card.active{
+                background-color: g.$white;
+                color: g.$black;
+            }
+            .card{
+                background-color: g.$secondary;
+                color: g.$white;
+                border-radius: 0.4rem;
+                padding: 1rem;
+                position: relative;
+                span{
+                    position: absolute;
+                    top: u.rem(-10);
+                    left: u.rem(30);
+                    background-color: g.$yellow;
+                    padding: u.rem(4);
+                    border-radius: u.rem(5);
+                    font-size: u.rem(14);
+                    font-weight: 500;
+                    font-family: u.$font2;
+                    color: g.$black;
+                }
+                .buy{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 1rem 0;
+                    h4{
+                        font-size: u.rem(18);
+                        font-family: u.$font1;
+                        padding: 0.35rem 0;
+                    }
+                    p{
+                        font-size: u.rem(22);
+                        font-weight: 500;
+                    }
+                }
+                .price{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.2rem;
+                    h4{
+                        font-size: u.rem(18);
+                        font-family: u.$font1;
+                        white-space: nowrap;
+                    }
+                    p{
+                        font-size: u.rem(22);
+                        font-weight: 500;
+                    }
+
+                }
+            }
+        }
+        .button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button{
+                margin: 2rem 0;
+                @include u.cta(g.$black, g.$white, u.rem(20));
+                text-transform: uppercase;
+                padding: 0.65rem 2rem;
+                &:hover{
+                    background-color: g.$light;
+                }
+            }
+        }
+    }
+}
+
+.promise__likes{
+    background: g.$light;
+    padding: 4rem 0;
+    .promise__content{
+        width: min(100% - u.rem(60), u.rem(1100));
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        .promise__heading{
+            h3{
+                color: g.$black;
+                font-size: u.rem(36);
+                padding: 1.5rem 0;
+            }
+            p{
+                color: g.$gray;
+                font-size: u.rem(21.5);
+                width: 50%;
+                line-height: 1.35;
+                font-weight: 400;
+            }
+        }
+        .like__services{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: u.rem(50);
+            row-gap: u.rem(80);
+            .like__service1, .like__service2, .like__service3, .like__service4{
+                img{
+                    width: 60%;
+                    border-radius: u.rem(15);
+                    box-shadow: 2px 2px 9px 1px rgba(217,217,217,1);
+                }
+                h4{
+
+                    font-size: u.rem(32);
+                    color: g.$black;
+                    font-family: u.$font1;
+                    padding: 1.45rem 0 2rem;
+                    font-weight: 600;
+                    line-height: 1.25;
+                }
+                p{
+                    width: 70%;
+                    font-size: u.rem(21);
+                    color: g.$gray;
+                    line-height:1.6;
+                }
+            }
+        }
+    }
+}
+
+.reasontobuy__likes{
+    background-color: g.$light;
+    padding: 3rem 0;
+    .reasonstobuy__content{
+        width: min(100% - u.rem(60), u.rem(1100));
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        row-gap: 3rem;
+        .top__text{
+            h2{
+                font-size: u.rem(38);
+                color: g.$black;
+                line-height: 1;
+                padding: 1rem 0;
+                @include u.breakpoint-down(medium){
+                    font-size: u.rem(34);
+                    line-height: 1.15;
+                }
+            }
+            .desc{
+                color: g.$gray;
+                font-size: u.rem(22);
+                width: 55%;
+                line-height: 1.45;
+                padding: 0.5rem 0 ;
+                @include u.breakpoint-down(medium){
+                    width: 75%;
+                    line-height: 1.5;
+                }
+            }
+        }
+        .bottom__accord{
+            padding-bottom: 1rem;
+            .why-likes-accord{
+                border-bottom: 1px solid #b8a0ff;
+                header{
+                    display: flex;
+                    align-items: center;
+                    column-gap: 1rem;
+                    padding: 2rem 0;
+                    span{
+                        color: #9d7cff;
+                        font-size: u.rem(18);
+                        font-weight: 300;
+                        cursor: pointer;
+                    }
+                    h4{
+                        width: 80%;
+                        font-size: u.rem(24);
+                        font-family: u.$font2;
+                        color: g.$black;
+                        line-height: 1.15;
+                    }
+                }
+                p{
+                    font-size: u.rem(22);
+                    font-family: u.$font2;
+                    color: g.$gray;
+                    line-height: 1.45;
+                    width: 70%;
+                    padding: 0 0 1rem 2rem;
+                }
+            }
+        }
+    }
+}
+
+.likes__reviews{
+    background-color: g.$light-blue;
+    padding: 3rem 0;
+    .reviews__content{
+        width: min(100% - u.rem(60), u.rem(1100));
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        .heading__content{
+            width: 80%;
+            .text{
+                h3{
+                    font-size: u.rem(36);
+                    color: g.$black;
+                    padding: 1rem 0;
+                    @include u.breakpoint-down(medium){
+                        font-size: u.rem(34);
+                    }
+                }
+                p{
+                    font-size: u.rem(22);
+                    color: g.$gray;
+                    width: 50%;
+                    line-height: 1.45;
+                    padding: 1rem 0 2rem;
+                    @include u.breakpoint-down(medium){
+                        width: 70%;
+                    }
+                }
+            }
+            .ratings{
+                display: flex;
+                flex-direction: column;
+                row-gap: 0.5rem;
+                h1{
+                    font-size: u.rem(60);
+                    color: g.$black;
+                    span{
+                        font-size: u.rem(36);
+                        margin-left: 0.05rem;
+                    }
+                }
+                .star-container{
+                    display: flex;
+                    gap: 1rem;
+                    .stars{
+                        font-size: u.rem(32);
+                        color: g.$yellow;
+                    }
+                    .peoplereviews{
+                        font-size: u.rem(16);
+                        color: g.$gray;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .reviews__section{
+            display: flex;
+            flex-direction: column;
+            .slick-slide > div {
+                margin: 0 u.rem(10);
+              }
+              .slick-list {
+                margin: 0 u.rem(-10);
+              }
+
+              .review__card{
+                padding: 1rem 2rem;
+                background: g.$white;
+                border-radius: u.rem(10);
+                overflow: hidden;
+                height: max-content;
+                cursor: pointer;
+                box-shadow: 0 5px 7px rgb(118 135 159 / 30%);
+                .stars-quote{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1rem 0;
+                    .star-icons{
+                        font-size: u.rem(24);
+                        color: g.$yellow;
+                    }
+                    .quotes{
+                        font-size: u.rem(32);
+                        color: g.$primary;
+                    }
+                }
+                .card-top{
+                    font-size: u.rem(20);
+                    font-family: u.$font1;
+                    font-weight: 600;
+                    padding: 2rem 0;
+                    color: g.$black;
+                }
+                .card-bottom{
+                    font-family: u.$font1;
+                    color: g.$gray;
+                    text-transform: uppercase;
+                    font-size: u.rem(17);
+                    font-weight: 300;
+                    padding: 2rem 0 1rem;
+                }
+              }
+           
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@use "../global" as g;
+@use '../util' as u;
+.sale{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: g.$secondary;
+    color: g.$white;
+    padding: 0.75rem 0;
+    z-index: 999;
+    p{
+        font-size: u.rem(19);
+        text-align: center;
+        letter-spacing: u.rem(1);
+    }
+}
