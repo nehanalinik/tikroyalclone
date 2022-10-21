@@ -21,6 +21,12 @@
     @include u.breakpoint-down(medium) {
       width: 20%;
     }
+    @include u.breakpoint-down(small) {
+      width: 30%;
+    }
+    @include u.breakpoint-down(xsmall) {
+      width: 35%;
+    }
     img {
       width: 100%;
     }
@@ -93,7 +99,7 @@
         font-family: u.$font2;
         position: absolute;
       right: -20px;
-      top: 9vh;
+      top: 8vh;
       display: flex;
       align-items: flex-start;
       flex-direction: column;
@@ -103,14 +109,18 @@
       padding: 1.12rem 0;
       z-index: 99;
       li{
+        width: 100%;
           a,span{
             display: flex;
             align-items: center;
             gap: 0.45rem;
-            padding: 1.25rem 5rem;
+            padding: 1.25rem 2rem;
             font-weight: 700;
             font-size: 1.35rem;
             color: g.$black;
+            @include u.breakpoint-down(medium){
+              width: max-content;
+            }
             &:hover{
                 color: g.$deep-purple;
             }

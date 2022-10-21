@@ -46,6 +46,10 @@
                     width: 70%;
                     font-size: u.rem(40);
                 }
+                @include u.breakpoint-down(small){
+                    font-size: u.rem(36);
+                    width: 100%;
+                }
             }
             p{
                 width: 45%;
@@ -56,6 +60,10 @@
                 @include u.breakpoint-down(medium){
                     text-align: center;
                     width: 60%;
+                }
+                @include u.breakpoint-down(small){
+                    font-size: u.rem(18);
+                    width: 80%;
                 }
             }
             .rating{
@@ -73,10 +81,17 @@
                     align-items: center;
                     gap: 1rem;
                 }
+                @include u.breakpoint-down(xsmall){
+                    padding: 1.75rem;
+                    width: 80%;
+                }
                 img{
                     width: 100%;
                     @include u.breakpoint-down(medium){
                         width: 80%;
+                    }
+                    @include u.breakpoint-down(small){
+                        width: 90%;
                     }
                 }
                 span{
@@ -197,6 +212,10 @@
                     left: -10px;
                     box-shadow: 6px 12px 28px 1px rgb(0 0 0 / 30%);
                     animation: animate 40s linear infinite;
+                    @include u.breakpoint-down(medium){
+                        font-size: 1rem;
+                        left: 0;
+                    }
                 }
                 .comment2{
                     background-color: g.$white;
@@ -214,6 +233,10 @@
                     left: -20px;
                     box-shadow: 6px 12px 28px 1px rgb(0 0 0 / 30%);
                     animation: animate 10s linear infinite;
+                    @include u.breakpoint-down(medium){
+                        font-size: 1rem;
+                        left: 0;
+                    }
                 }
                 .comment3{
                     background-color: g.$white;
@@ -231,6 +254,10 @@
                     right: -30px;
                     box-shadow: 6px 12px 28px 1px rgb(0 0 0 / 30%);
                     animation: animate 30s linear infinite;
+                    @include u.breakpoint-down(medium){
+                        font-size: 1rem;
+                        right: 5px;
+                    }
                 }
                 .comment4{
                     background-color: g.$white;
@@ -248,6 +275,10 @@
                     right: -30px;
                     box-shadow: 6px 12px 28px 1px rgb(0 0 0 / 30%);
                     animation: animate 25s linear infinite;
+                    @include u.breakpoint-down(medium){
+                        font-size: 1rem;
+                        right: 10px;
+                    }
                 }
                 .comment5{
                     background-color: g.$white;
@@ -265,6 +296,10 @@
                     left: -10px;
                     box-shadow: 6px 12px 28px 1px rgb(0 0 0 / 30%);
                     animation: animate 20s linear infinite;
+                    @include u.breakpoint-down(medium){
+                        font-size: 1rem;
+                        left: 0;
+                    }
                 }
             }
         }

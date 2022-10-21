@@ -30,6 +30,9 @@
                 @include u.breakpoint-down(medium){
                     text-align: center;
                 }
+                @include u.breakpoint-down(small){
+                    font-size: u.rem(36);
+                }
             }
             p{
                 font-size: u.rem(21);
@@ -38,6 +41,9 @@
                 @include u.breakpoint-down(medium){
                     width: 80%;
                     text-align: center;
+                }
+                @include u.breakpoint-down(small){
+                    font-size: u.rem(18);
                 }
             }
         }
@@ -52,6 +58,15 @@
                 background-color: g.$white;
                 border-radius: 0.85rem;
                 width: 450px;
+                @include u.breakpoint-down(medium){
+                    width: 400px;
+                }
+                @include u.breakpoint-down(small){
+                    width: 380px;
+                }
+                @include u.breakpoint-down(xsmall){
+                    width: 320px;
+                }
                 .head{
                     padding: 1rem;
                     display: flex;
@@ -68,6 +83,9 @@
                     }
                     h3{
                         font-size: u.rem(24);
+                        @include u.breakpoint-down(xsmall){
+                            font-size: u.rem(22);
+                        }
                     }
                 }
                 .slider-parent{
@@ -147,6 +165,13 @@
                 @include u.breakpoint-down(medium){
                     width: 60%;
                 }
+                @include u.breakpoint-down(small){
+                    width: 80%;
+                }
+                @include u.breakpoint-down(small){
+                    font-size: u.rem(16);
+                    width: 100%;
+                }
             }
         }
     }
@@ -166,7 +191,7 @@
         }
         .likes__content-text{
             @include u.breakpoint-down(medium){
-                padding: 0 80px;
+                padding: 0 u.rem(20);
             }
             h2{
                 font-size: u.rem(40);
@@ -178,6 +203,12 @@
                 @include u.breakpoint-down(medium){
                     font-size: u.rem(34);
                     width: 100%;
+                }
+                @include u.breakpoint-down(small){
+                    font-size: u.rem(32);
+                }
+                @include u.breakpoint-down(xsmall){
+                    font-size: u.rem(30);
                 }
             }
             .likes__desc{
@@ -193,6 +224,9 @@
                     @include u.breakpoint-down(medium){
                         font-size: u.rem(19);
                         width: 100%;
+                    }
+                    @include u.breakpoint-down(small){
+                        font-size: u.rem(18);
                     }
                 }
                 .imp-para{
@@ -216,6 +250,13 @@
                 width: 60%;
                 height: 60%;
             }
+            @include u.breakpoint-down(small){
+                width: 80%;
+                height: 80%;
+            }
+            @include u.breakpoint-down(xsmall){
+                width: 100%;
+            }
         }
     }
 }
@@ -238,6 +279,9 @@
                 color: g.$white;
                 text-align: center;
                 padding: 1rem 0;
+                @include u.breakpoint-down(medium){
+                   font-size: u.rem(34);
+                }
             }
             button{
                 @include u.cta(g.$white, g.$primary, u.rem(16));
@@ -248,9 +292,15 @@
             .desc{
                 width: 45%;
                 color: g.$white;
-                padding: 1rem 0;
+                padding: 1rem 0 2rem;
                 font-size: u.rem(18);
                 line-height: 1.35;
+                @include u.breakpoint-down(medium){
+                    width: 60%;
+                }
+                @include u.breakpoint-down(small){
+                    width: 80%;
+                }
             }
         }
         .buy__likes-card{
@@ -326,6 +376,9 @@
                 &:hover{
                     background-color: g.$light;
                 }
+                @include u.breakpoint-down(small){
+                    font-size: u.rem(18);
+                }
             }
         }
     }
@@ -345,6 +398,9 @@
                 color: g.$black;
                 font-size: u.rem(36);
                 padding: 1.5rem 0;
+                @include u.breakpoint-down(medium){
+                    font-size: u.rem(34);
+                }
             }
             p{
                 color: g.$gray;
@@ -352,6 +408,18 @@
                 width: 50%;
                 line-height: 1.35;
                 font-weight: 400;
+                @include u.breakpoint-down(medium){
+                    width: 60%;
+                    font-size: u.rem(20);
+                }
+                @include u.breakpoint-down(small){
+                    width: 80%;
+                    font-size: u.rem(18);
+                }
+                @include u.breakpoint-down(xsmall){
+                    width: 100%;
+                    font-size: u.rem(16);
+                }
             }
         }
         .like__services{
@@ -359,6 +427,9 @@
             grid-template-columns: repeat(2, 1fr);
             column-gap: u.rem(50);
             row-gap: u.rem(80);
+            @include u.breakpoint-down(xsmall){
+                grid-template-columns: repeat(1, 1fr);
+            }
             .like__service1, .like__service2, .like__service3, .like__service4{
                 img{
                     width: 60%;
@@ -373,12 +444,24 @@
                     padding: 1.45rem 0 2rem;
                     font-weight: 600;
                     line-height: 1.25;
+                    @include u.breakpoint-down(medium){
+                        font-size: u.rem(30);
+                    }
+                    @include u.breakpoint-down(small){
+                        font-size: u.rem(28);
+                    }
                 }
                 p{
                     width: 70%;
                     font-size: u.rem(21);
                     color: g.$gray;
                     line-height:1.6;
+                    @include u.breakpoint-down(medium){
+                        width: 90%;
+                    }
+                    @include u.breakpoint-down(small){
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -406,6 +489,10 @@
                     font-size: u.rem(34);
                     line-height: 1.15;
                 }
+                @include u.breakpoint-down(medium){
+                    font-size: u.rem(32);
+                    width: 100%;
+                }
             }
             .desc{
                 color: g.$gray;
@@ -414,8 +501,14 @@
                 line-height: 1.45;
                 padding: 0.5rem 0 ;
                 @include u.breakpoint-down(medium){
-                    width: 75%;
+                    width: 80%;
                     line-height: 1.5;
+                }
+                @include u.breakpoint-down(small){
+                    font-size: u.rem(20);
+                }
+                @include u.breakpoint-down(xsmall){
+                    font-size: u.rem(18);
                 }
             }
         }
@@ -440,6 +533,9 @@
                         font-family: u.$font2;
                         color: g.$black;
                         line-height: 1.15;
+                        @include u.breakpoint-down(small){
+                            font-size: u.rem(20);
+                        }
                     }
                 }
                 p{
@@ -447,8 +543,11 @@
                     font-family: u.$font2;
                     color: g.$gray;
                     line-height: 1.45;
-                    width: 70%;
+                    width: 80%;
                     padding: 0 0 1rem 2rem;
+                    @include u.breakpoint-down(small){
+                        font-size: u.rem(18);
+                    }
                 }
             }
         }
@@ -484,6 +583,10 @@
                     @include u.breakpoint-down(medium){
                         width: 70%;
                     }
+                    @include u.breakpoint-down(small){
+                        width: 90%;
+                        font-size: u.rem(20);
+                    }
                 }
             }
             .ratings{
@@ -501,6 +604,10 @@
                 .star-container{
                     display: flex;
                     gap: 1rem;
+                    @include u.breakpoint-down(small){
+                        flex-direction: column;
+                        gap: 0;
+                    }
                     .stars{
                         font-size: u.rem(32);
                         color: g.$yellow;
@@ -509,6 +616,9 @@
                         font-size: u.rem(16);
                         color: g.$gray;
                         font-weight: 600;
+                        @include u.breakpoint-down(small){
+                            font-size: u.rem(14);
+                        }
                     }
                 }
             }
